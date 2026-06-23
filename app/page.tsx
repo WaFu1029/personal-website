@@ -1,8 +1,24 @@
+import AsciiCube from "./AsciiCube";
+
 const sections = [
   {
     title: "about me",
     lines: [
-      ["i like building", "math", "biology"],
+      [
+        <>
+          i like{" "}
+          <a
+            href="https://wordmuse.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-4 transition-colors hover:text-white/60"
+          >
+            building
+          </a>
+        </>,
+        "math",
+        "biology",
+      ],
       ["jjk", "linkin park", "calvin harris", "hades I and II", "and dancing."],
     ],
   },
@@ -22,7 +38,7 @@ const sections = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex-1 p-6 sm:p-10">
+    <main className="min-h-screen flex-1 p-6 sm:p-10 flex items-stretch justify-between gap-8">
       <div className="font-[family-name:var(--font-jakarta)] lowercase text-white">
         <h1 className="font-display text-9xl leading-none tracking-wide" style={{ fontSize: '150px', letterSpacing: '0.03em' }}>
             傅<span className="ml-16">健宸</span>
@@ -31,7 +47,7 @@ export default function Home() {
           warren fu.
         </p>
 
-        <div className="mt-10 flex flex-col gap-8" style={{ letterSpacing: '-0.04em', marginLeft: '0.5em' }}>
+        <div className="mt-10 flex flex-col gap-8" style={{ letterSpacing: '-0.1em', marginLeft: '0.5em' }}>
           {sections.map((section) => (
             <section key={section.title}>
               <h2 className="text-2xl font-semibold sm:text-3xl">{section.title}</h2>
@@ -48,6 +64,8 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <AsciiCube />
     </main>
   );
 }
