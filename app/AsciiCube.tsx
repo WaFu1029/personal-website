@@ -105,7 +105,7 @@ export default function AsciiCube() {
   }, []);
 
   return (
-    <div className="flex h-full items-center" style={{ marginTop: "-60px" }}>
+    <div className="flex h-full items-center" style={{ transform: "translateY(-40px)" }}>
       <pre
         aria-hidden
         className="select-none font-mono text-white"

@@ -7,14 +7,10 @@ const sections = [
       [
         <>
           i like{" "}
-          <a
-            href="https://wordmuse.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-4 transition-colors hover:text-white/60"
-          >
-            building
-          </a>
+          <span className="group cursor-default">
+            <span className="group-hover:hidden">building</span>
+            <span className="hidden group-hover:inline">coming soon</span>
+          </span>
         </>,
         "math",
         "biology",

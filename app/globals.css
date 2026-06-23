@@ -19,3 +19,12 @@ body {
 .font-display {
   font-family: var(--font-zcool), sans-serif;
 }
+
+/* lock scroll on desktop; mobile stays scrollable */
+@media (min-width: 768px) {
+  html,
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
