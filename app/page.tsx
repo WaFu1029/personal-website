@@ -1,4 +1,5 @@
 import AsciiCube from "./AsciiCube";
+import Socials from "./Socials";
 
 const sections = [
   {
@@ -39,9 +40,12 @@ export default function Home() {
         <h1 className="font-display leading-none tracking-wide" style={{ fontSize: 'clamp(100px, 25vw, 150px)', letterSpacing: '0.03em' }}>
             傅<span className="ml-[0.3em]">健宸</span>
         </h1>
-        <p className="mt-1 font-bold tracking-tight" style={{ fontSize: 'clamp(30px, 9vw, 50px)', letterSpacing: '-0.06em', marginLeft: '0.2em' }}>
-          warren fu.
-        </p>
+        <div className="mt-1 flex flex-wrap items-baseline gap-x-4 gap-y-1" style={{ marginLeft: '0.2em' }}>
+          <p className="font-bold tracking-tight" style={{ fontSize: 'clamp(30px, 9vw, 50px)', letterSpacing: '-0.06em' }}>
+            warren fu.
+          </p>
+          <Socials />
+        </div>
 
         <div className="mt-10 flex flex-col gap-8" style={{ letterSpacing: '-0.1em', marginLeft: '0.5em' }}>
           {sections.map((section) => (
