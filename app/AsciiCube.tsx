@@ -105,11 +105,15 @@ export default function AsciiCube() {
   }, []);
 
   return (
-    <div className="flex h-full items-center" style={{ transform: "translateY(-40px)" }}>
+    <div className="flex items-center justify-center translate-y-0 md:h-full md:-translate-y-10">
       <pre
         aria-hidden
-        className="select-none font-mono text-white"
-        style={{ fontSize: "10px", lineHeight: "10px", letterSpacing: "0" }}
+        className="select-none font-mono leading-none text-white"
+        style={{
+          fontSize: "clamp(4px, 1.05vw, 10px)",
+          lineHeight: "1em",
+          letterSpacing: "0",
+        }}
       >
         {frame}
       </pre>

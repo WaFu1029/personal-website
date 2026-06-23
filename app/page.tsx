@@ -34,20 +34,20 @@ const sections = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex-1 p-6 sm:p-10 flex items-stretch justify-between gap-8">
+    <main className="min-h-screen flex-1 p-6 sm:p-10 flex flex-col items-stretch gap-8 md:flex-row md:justify-between">
       <div className="font-[family-name:var(--font-jakarta)] lowercase text-white">
-        <h1 className="font-display text-9xl leading-none tracking-wide" style={{ fontSize: '150px', letterSpacing: '0.03em' }}>
-            傅<span className="ml-16">健宸</span>
+        <h1 className="font-display leading-none tracking-wide" style={{ fontSize: 'clamp(100px, 25vw, 150px)', letterSpacing: '0.03em' }}>
+            傅<span className="ml-[0.3em]">健宸</span>
         </h1>
-        <p className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl" style={{ fontSize: '50px', letterSpacing: '-0.06em', marginLeft: '0.2em' }}>
+        <p className="mt-1 font-bold tracking-tight" style={{ fontSize: 'clamp(30px, 9vw, 50px)', letterSpacing: '-0.06em', marginLeft: '0.2em' }}>
           warren fu.
         </p>
 
         <div className="mt-10 flex flex-col gap-8" style={{ letterSpacing: '-0.1em', marginLeft: '0.5em' }}>
           {sections.map((section) => (
             <section key={section.title}>
-              <h2 className="text-2xl font-semibold sm:text-3xl">{section.title}</h2>
-              <div className="mt-3 flex flex-col gap-1 text-lg font-normal sm:text-xl">
+              <h2 className="text-lg font-semibold sm:text-3xl">{section.title}</h2>
+              <div className="mt-2 flex flex-col gap-1 text-xs font-normal sm:mt-3 sm:text-xl" style={{ letterSpacing: '-0.07em' }}>
                 {section.lines.map((line, i) => (
                   <div key={i} className="flex flex-wrap gap-x-6">
                     {line.map((item, j) => (
