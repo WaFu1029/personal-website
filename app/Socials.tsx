@@ -68,6 +68,14 @@ export default function Socials() {
       >
         {reveal("ig", "instagram")}
       </a>
+      <a
+        href="https://github.com/WaFu1029"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={base}
+      >
+        {reveal("gh", "github")}
+      </a>
       <button
         type="button"
         onClick={() => copy("dc", DISCORD)}
